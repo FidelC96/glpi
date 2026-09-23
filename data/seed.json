@@ -2,49 +2,544 @@
   "_nota": "Datos 100% ficticios para la demo. GLPI actúa como SIMULADOR de un sistema externo tipo GSPN; no es GSPN.",
   "manufacturer": "Samsung",
   "phone_models": [
-    {"name": "Galaxy S24 Ultra", "product_number": "SM-S928B"},
-    {"name": "Galaxy A55 5G", "product_number": "SM-A556E"},
-    {"name": "Galaxy Tab S9", "product_number": "SM-X710"}
+    {
+      "name": "Galaxy S24 Ultra",
+      "product_number": "SM-S928B"
+    },
+    {
+      "name": "Galaxy A55 5G",
+      "product_number": "SM-A556E"
+    },
+    {
+      "name": "Galaxy Tab S9",
+      "product_number": "SM-X710"
+    },
+    {
+      "name": "Galaxy S23 FE",
+      "product_number": "SM-S711B"
+    },
+    {
+      "name": "Galaxy A15",
+      "product_number": "SM-A155M"
+    },
+    {
+      "name": "Galaxy Z Flip6",
+      "product_number": "SM-F741B"
+    },
+    {
+      "name": "Galaxy Watch7",
+      "product_number": "SM-L310"
+    }
   ],
-  "states": ["Operativo (demo)", "En taller (demo)"],
-  "itil_category": {"name": "Servicio técnico Samsung (demo)", "code": "SVC-SAMSUNG-DEMO"},
-  "pending_reasons": ["Esperando aprobación del cliente (demo)"],
+  "states": [
+    "Operativo (demo)",
+    "En taller (demo)"
+  ],
+  "itil_category": {
+    "name": "Servicio técnico Samsung (demo)",
+    "code": "SVC-SAMSUNG-DEMO"
+  },
+  "pending_reasons": [
+    "Esperando aprobación del cliente (demo)",
+    "Esperando repuesto (demo)"
+  ],
   "users": [
-    {"username": "tecnico.demo", "firstname": "Carla", "realname": "Rojas Demo", "kind": "technician", "profile": "Technician",
-     "comment": "Técnica de taller (ficticia)."},
-    {"username": "cliente.rquispe", "firstname": "Rosa", "realname": "Quispe Demo", "kind": "customer",
-     "phone": "+51 900 000 001", "comment": "Cliente persona natural (ficticia). Odoo: res.partner"},
-    {"username": "cliente.andina", "firstname": "Luis", "realname": "Paredes (Comercial Andina SAC demo)", "kind": "customer",
-     "phone": "+51 900 000 002", "comment": "Contacto de empresa ficticia. Odoo: res.partner hijo de Comercial Andina SAC"},
-    {"username": "cliente.jmendoza", "firstname": "Jorge", "realname": "Mendoza Demo", "kind": "customer",
-     "phone": "+51 900 000 003", "comment": "Cliente persona natural (ficticia)."}
+    {
+      "username": "tecnico.demo",
+      "firstname": "Carla",
+      "realname": "Rojas Demo",
+      "kind": "technician",
+      "profile": "Technician",
+      "comment": "Técnica de taller (ficticia)."
+    },
+    {
+      "username": "cliente.rquispe",
+      "firstname": "Rosa",
+      "realname": "Quispe Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 001",
+      "comment": "Cliente persona natural (ficticia). Odoo: res.partner"
+    },
+    {
+      "username": "cliente.andina",
+      "firstname": "Luis",
+      "realname": "Paredes (Comercial Andina SAC demo)",
+      "kind": "customer",
+      "phone": "+51 900 000 002",
+      "comment": "Contacto de empresa ficticia. Odoo: res.partner hijo de Comercial Andina SAC"
+    },
+    {
+      "username": "cliente.jmendoza",
+      "firstname": "Jorge",
+      "realname": "Mendoza Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 003",
+      "comment": "Cliente persona natural (ficticia)."
+    },
+    {
+      "username": "cliente.demo01",
+      "firstname": "Ana",
+      "realname": "Torres Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 101",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    },
+    {
+      "username": "cliente.demo02",
+      "firstname": "Carlos",
+      "realname": "Vega Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 102",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    },
+    {
+      "username": "cliente.demo03",
+      "firstname": "María",
+      "realname": "Huanca Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 103",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    },
+    {
+      "username": "cliente.demo04",
+      "firstname": "Pedro",
+      "realname": "Salas Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 104",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    },
+    {
+      "username": "cliente.demo05",
+      "firstname": "Lucía",
+      "realname": "Ríos Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 105",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    },
+    {
+      "username": "cliente.demo06",
+      "firstname": "Diego",
+      "realname": "Castro Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 106",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    },
+    {
+      "username": "cliente.demo07",
+      "firstname": "Elena",
+      "realname": "Paz Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 107",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    },
+    {
+      "username": "cliente.demo08",
+      "firstname": "Raúl",
+      "realname": "Ibáñez Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 108",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    },
+    {
+      "username": "cliente.demo09",
+      "firstname": "Sofía",
+      "realname": "León Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 109",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    },
+    {
+      "username": "cliente.demo10",
+      "firstname": "Miguel",
+      "realname": "Farfán Demo",
+      "kind": "customer",
+      "phone": "+51 900 000 110",
+      "comment": "Cliente ficticio (lote de pendientes)."
+    }
   ],
   "phones": [
-    {"name": "SM-S928B-DEMO-001", "model": "Galaxy S24 Ultra", "serial": "R58NDEMO0001", "otherserial": "IMEI-350000000000011",
-     "owner": "cliente.rquispe", "state": "Operativo (demo)", "value": 4200.0,
-     "warranty": {"date_buy": "2026-01-15", "date_warranty": "2026-01-15", "months": 24, "info": "Garantía de fábrica 24 meses (demo). Daño físico no cubierto."}},
-    {"name": "SM-A556E-DEMO-002", "model": "Galaxy A55 5G", "serial": "R58NDEMO0002", "otherserial": "IMEI-350000000000022",
-     "owner": "cliente.andina", "state": "En taller (demo)", "value": 1600.0,
-     "warranty": {"date_buy": "2026-03-01", "date_warranty": "2026-03-01", "months": 12, "info": "Garantía de fábrica 12 meses (demo)."}},
-    {"name": "SM-X710-DEMO-003", "model": "Galaxy Tab S9", "serial": "R58NDEMO0003", "otherserial": "IMEI-350000000000033",
-     "owner": "cliente.jmendoza", "state": "En taller (demo)", "value": 2300.0,
-     "warranty": {"date_buy": "2024-05-10", "date_warranty": "2024-05-10", "months": 12, "info": "Garantía vencida (demo)."}}
+    {
+      "name": "SM-S928B-DEMO-001",
+      "model": "Galaxy S24 Ultra",
+      "serial": "R58NDEMO0001",
+      "otherserial": "IMEI-350000000000011",
+      "owner": "cliente.rquispe",
+      "state": "Operativo (demo)",
+      "value": 4200.0,
+      "warranty": {
+        "date_buy": "2026-01-15",
+        "date_warranty": "2026-01-15",
+        "months": 24,
+        "info": "Garantía de fábrica 24 meses (demo). Daño físico no cubierto."
+      }
+    },
+    {
+      "name": "SM-A556E-DEMO-002",
+      "model": "Galaxy A55 5G",
+      "serial": "R58NDEMO0002",
+      "otherserial": "IMEI-350000000000022",
+      "owner": "cliente.andina",
+      "state": "En taller (demo)",
+      "value": 1600.0,
+      "warranty": {
+        "date_buy": "2026-03-01",
+        "date_warranty": "2026-03-01",
+        "months": 12,
+        "info": "Garantía de fábrica 12 meses (demo)."
+      }
+    },
+    {
+      "name": "SM-X710-DEMO-003",
+      "model": "Galaxy Tab S9",
+      "serial": "R58NDEMO0003",
+      "otherserial": "IMEI-350000000000033",
+      "owner": "cliente.jmendoza",
+      "state": "En taller (demo)",
+      "value": 2300.0,
+      "warranty": {
+        "date_buy": "2024-05-10",
+        "date_warranty": "2024-05-10",
+        "months": 12,
+        "info": "Garantía vencida (demo)."
+      }
+    },
+    {
+      "name": "SM-S928B-DEMO-004",
+      "model": "Galaxy S24 Ultra",
+      "serial": "R58NDEMO0004",
+      "otherserial": "IMEI-350000000000004",
+      "owner": "cliente.demo01",
+      "state": "En taller (demo)",
+      "value": 2300.0,
+      "warranty": {
+        "date_buy": "2025-01-10",
+        "date_warranty": "2025-01-10",
+        "months": 12,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-A556E-DEMO-005",
+      "model": "Galaxy A55 5G",
+      "serial": "R58NDEMO0005",
+      "otherserial": "IMEI-350000000000005",
+      "owner": "cliente.demo02",
+      "state": "En taller (demo)",
+      "value": 3100.0,
+      "warranty": {
+        "date_buy": "2025-02-10",
+        "date_warranty": "2025-02-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-X710-DEMO-006",
+      "model": "Galaxy Tab S9",
+      "serial": "R58NDEMO0006",
+      "otherserial": "IMEI-350000000000006",
+      "owner": "cliente.demo03",
+      "state": "En taller (demo)",
+      "value": 4200.0,
+      "warranty": {
+        "date_buy": "2025-03-10",
+        "date_warranty": "2025-03-10",
+        "months": 12,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-S711B-DEMO-007",
+      "model": "Galaxy S23 FE",
+      "serial": "R58NDEMO0007",
+      "otherserial": "IMEI-350000000000007",
+      "owner": "cliente.demo04",
+      "state": "En taller (demo)",
+      "value": 1200.0,
+      "warranty": {
+        "date_buy": "2025-04-10",
+        "date_warranty": "2025-04-10",
+        "months": 12,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-A155M-DEMO-008",
+      "model": "Galaxy A15",
+      "serial": "R58NDEMO0008",
+      "otherserial": "IMEI-350000000000008",
+      "owner": "cliente.demo05",
+      "state": "En taller (demo)",
+      "value": 4200.0,
+      "warranty": {
+        "date_buy": "2025-05-10",
+        "date_warranty": "2025-05-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-F741B-DEMO-009",
+      "model": "Galaxy Z Flip6",
+      "serial": "R58NDEMO0009",
+      "otherserial": "IMEI-350000000000009",
+      "owner": "cliente.demo06",
+      "state": "En taller (demo)",
+      "value": 4200.0,
+      "warranty": {
+        "date_buy": "2025-06-10",
+        "date_warranty": "2025-06-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-L310-DEMO-010",
+      "model": "Galaxy Watch7",
+      "serial": "R58NDEMO0010",
+      "otherserial": "IMEI-350000000000010",
+      "owner": "cliente.demo07",
+      "state": "En taller (demo)",
+      "value": 4200.0,
+      "warranty": {
+        "date_buy": "2025-07-10",
+        "date_warranty": "2025-07-10",
+        "months": 12,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-S928B-DEMO-011",
+      "model": "Galaxy S24 Ultra",
+      "serial": "R58NDEMO0011",
+      "otherserial": "IMEI-350000000000011",
+      "owner": "cliente.demo08",
+      "state": "En taller (demo)",
+      "value": 2300.0,
+      "warranty": {
+        "date_buy": "2025-08-10",
+        "date_warranty": "2025-08-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-A556E-DEMO-012",
+      "model": "Galaxy A55 5G",
+      "serial": "R58NDEMO0012",
+      "otherserial": "IMEI-350000000000012",
+      "owner": "cliente.demo09",
+      "state": "En taller (demo)",
+      "value": 1600.0,
+      "warranty": {
+        "date_buy": "2025-09-10",
+        "date_warranty": "2025-09-10",
+        "months": 12,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-X710-DEMO-013",
+      "model": "Galaxy Tab S9",
+      "serial": "R58NDEMO0013",
+      "otherserial": "IMEI-350000000000013",
+      "owner": "cliente.demo10",
+      "state": "En taller (demo)",
+      "value": 4200.0,
+      "warranty": {
+        "date_buy": "2025-10-10",
+        "date_warranty": "2025-10-10",
+        "months": 12,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-S711B-DEMO-014",
+      "model": "Galaxy S23 FE",
+      "serial": "R58NDEMO0014",
+      "otherserial": "IMEI-350000000000014",
+      "owner": "cliente.demo01",
+      "state": "En taller (demo)",
+      "value": 4200.0,
+      "warranty": {
+        "date_buy": "2025-11-10",
+        "date_warranty": "2025-11-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-A155M-DEMO-015",
+      "model": "Galaxy A15",
+      "serial": "R58NDEMO0015",
+      "otherserial": "IMEI-350000000000015",
+      "owner": "cliente.demo02",
+      "state": "En taller (demo)",
+      "value": 1600.0,
+      "warranty": {
+        "date_buy": "2025-12-10",
+        "date_warranty": "2025-12-10",
+        "months": 12,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-F741B-DEMO-016",
+      "model": "Galaxy Z Flip6",
+      "serial": "R58NDEMO0016",
+      "otherserial": "IMEI-350000000000016",
+      "owner": "cliente.demo03",
+      "state": "En taller (demo)",
+      "value": 2300.0,
+      "warranty": {
+        "date_buy": "2025-01-10",
+        "date_warranty": "2025-01-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-L310-DEMO-017",
+      "model": "Galaxy Watch7",
+      "serial": "R58NDEMO0017",
+      "otherserial": "IMEI-350000000000017",
+      "owner": "cliente.demo04",
+      "state": "En taller (demo)",
+      "value": 4200.0,
+      "warranty": {
+        "date_buy": "2025-02-10",
+        "date_warranty": "2025-02-10",
+        "months": 12,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-S928B-DEMO-018",
+      "model": "Galaxy S24 Ultra",
+      "serial": "R58NDEMO0018",
+      "otherserial": "IMEI-350000000000018",
+      "owner": "cliente.demo05",
+      "state": "En taller (demo)",
+      "value": 2300.0,
+      "warranty": {
+        "date_buy": "2025-03-10",
+        "date_warranty": "2025-03-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-A556E-DEMO-019",
+      "model": "Galaxy A55 5G",
+      "serial": "R58NDEMO0019",
+      "otherserial": "IMEI-350000000000019",
+      "owner": "cliente.demo06",
+      "state": "En taller (demo)",
+      "value": 4200.0,
+      "warranty": {
+        "date_buy": "2025-04-10",
+        "date_warranty": "2025-04-10",
+        "months": 12,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-X710-DEMO-020",
+      "model": "Galaxy Tab S9",
+      "serial": "R58NDEMO0020",
+      "otherserial": "IMEI-350000000000020",
+      "owner": "cliente.demo07",
+      "state": "En taller (demo)",
+      "value": 1200.0,
+      "warranty": {
+        "date_buy": "2025-05-10",
+        "date_warranty": "2025-05-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-S711B-DEMO-021",
+      "model": "Galaxy S23 FE",
+      "serial": "R58NDEMO0021",
+      "otherserial": "IMEI-350000000000021",
+      "owner": "cliente.demo08",
+      "state": "En taller (demo)",
+      "value": 3100.0,
+      "warranty": {
+        "date_buy": "2025-06-10",
+        "date_warranty": "2025-06-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-A155M-DEMO-022",
+      "model": "Galaxy A15",
+      "serial": "R58NDEMO0022",
+      "otherserial": "IMEI-350000000000022",
+      "owner": "cliente.demo09",
+      "state": "En taller (demo)",
+      "value": 1600.0,
+      "warranty": {
+        "date_buy": "2025-07-10",
+        "date_warranty": "2025-07-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    },
+    {
+      "name": "SM-F741B-DEMO-023",
+      "model": "Galaxy Z Flip6",
+      "serial": "R58NDEMO0023",
+      "otherserial": "IMEI-350000000000023",
+      "owner": "cliente.demo10",
+      "state": "En taller (demo)",
+      "value": 3100.0,
+      "warranty": {
+        "date_buy": "2025-08-10",
+        "date_warranty": "2025-08-10",
+        "months": 24,
+        "info": "Garantía de fábrica (demo)."
+      }
+    }
   ],
   "tickets": [
     {
       "external_id": "GSPN-DEMO-000101",
       "case": "servicio_correcto_aprobado",
       "name": "Cambio de pantalla Galaxy S24 Ultra (orden GSPN-DEMO-000101)",
-      "type": 1, "urgency": 3, "date": "2026-09-01T09:30:00",
-      "phone_serial": "R58NDEMO0001", "customer": "cliente.rquispe", "technician": "tecnico.demo",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-01T09:30:00",
+      "phone_serial": "R58NDEMO0001",
+      "customer": "cliente.rquispe",
+      "technician": "tecnico.demo",
       "content": "Orden externa: GSPN-DEMO-000101\nSíntoma reportado: pantalla con líneas verdes tras caída.\nSerie declarada en la orden: R58NDEMO0001\nEquipo en garantía de fábrica; daño físico no cubierto (servicio con cargo).",
       "diagnosis": "DIAGNÓSTICO: panel AMOLED dañado por impacto; batería, placa y cámaras OK. Cobertura: garantía vigente pero daño físico NO cubierto. Se emite presupuesto al cliente: S/ 970.00.",
-      "work": {"content": "TRABAJO REALIZADO: reemplazo de panel AMOLED (repuesto GH82-DEMO-0101), calibración táctil y prueba funcional completa.", "minutes": 90},
+      "work": {
+        "content": "TRABAJO REALIZADO: reemplazo de panel AMOLED (repuesto GH82-DEMO-0101), calibración táctil y prueba funcional completa.",
+        "minutes": 90
+      },
       "costs": [
-        {"name": "Repuesto: Panel AMOLED GH82-DEMO-0101", "cost_material": 850.0, "cost_fixed": 0.0, "minutes": 0},
-        {"name": "Mano de obra: 1.5 h taller", "cost_material": 0.0, "cost_fixed": 120.0, "minutes": 90}
+        {
+          "name": "Repuesto: Panel AMOLED GH82-DEMO-0101",
+          "cost_material": 850.0,
+          "cost_fixed": 0.0,
+          "minutes": 0
+        },
+        {
+          "name": "Mano de obra: 1.5 h taller",
+          "cost_material": 0.0,
+          "cost_fixed": 120.0,
+          "minutes": 90
+        }
       ],
-      "approval": {"status": "accepted", "submission_comment": "Presupuesto S/ 970.00 enviado al cliente para aprobación.", "approval_comment": "Cliente aprobó el presupuesto (demo)."},
+      "approval": {
+        "status": "accepted",
+        "submission_comment": "Presupuesto S/ 970.00 enviado al cliente para aprobación.",
+        "approval_comment": "Cliente aprobó el presupuesto (demo)."
+      },
       "solution": "Equipo reparado, probado y entregado al cliente. Prueba funcional OK.",
       "final_status": 6,
       "pending_reason": null
@@ -53,16 +548,37 @@
       "external_id": "GSPN-DEMO-000102",
       "case": "serie_diferente_entre_sistemas",
       "name": "Reemplazo de batería Galaxy A55 (orden GSPN-DEMO-000102)",
-      "type": 1, "urgency": 3, "date": "2026-09-05T11:00:00",
-      "phone_serial": "R58NDEMO0002", "customer": "cliente.andina", "technician": "tecnico.demo",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-05T11:00:00",
+      "phone_serial": "R58NDEMO0002",
+      "customer": "cliente.andina",
+      "technician": "tecnico.demo",
       "content": "Orden externa: GSPN-DEMO-000102\nSíntoma reportado: batería se descarga en 2 horas.\nSerie declarada en la orden: R58NDEMO0002\nNOTA DEMO: en Odoo el lote/serie registrado para este equipo difiere (ver data/odoo_side.json).",
       "diagnosis": "DIAGNÓSTICO: batería con 61% de salud; hinchazón leve. Fuera de cobertura por uso (política demo). Presupuesto: S/ 260.00.",
-      "work": {"content": "TRABAJO REALIZADO: reemplazo de batería (repuesto GH82-DEMO-0202), sellado y prueba de carga.", "minutes": 45},
+      "work": {
+        "content": "TRABAJO REALIZADO: reemplazo de batería (repuesto GH82-DEMO-0202), sellado y prueba de carga.",
+        "minutes": 45
+      },
       "costs": [
-        {"name": "Repuesto: Batería GH82-DEMO-0202", "cost_material": 190.0, "cost_fixed": 0.0, "minutes": 0},
-        {"name": "Mano de obra: 0.75 h taller", "cost_material": 0.0, "cost_fixed": 70.0, "minutes": 45}
+        {
+          "name": "Repuesto: Batería GH82-DEMO-0202",
+          "cost_material": 190.0,
+          "cost_fixed": 0.0,
+          "minutes": 0
+        },
+        {
+          "name": "Mano de obra: 0.75 h taller",
+          "cost_material": 0.0,
+          "cost_fixed": 70.0,
+          "minutes": 45
+        }
       ],
-      "approval": {"status": "accepted", "submission_comment": "Presupuesto S/ 260.00 enviado al cliente.", "approval_comment": "Cliente aprobó el presupuesto (demo)."},
+      "approval": {
+        "status": "accepted",
+        "submission_comment": "Presupuesto S/ 260.00 enviado al cliente.",
+        "approval_comment": "Cliente aprobó el presupuesto (demo)."
+      },
       "solution": "Batería reemplazada. Prueba de carga OK.",
       "final_status": 5,
       "pending_reason": null
@@ -71,18 +587,631 @@
       "external_id": "GSPN-DEMO-000103",
       "case": "servicio_pendiente_o_rechazado",
       "name": "Tablet no enciende Galaxy Tab S9 (orden GSPN-DEMO-000103)",
-      "type": 1, "urgency": 4, "date": "2026-09-10T16:15:00",
-      "phone_serial": "R58NDEMO0003", "customer": "cliente.jmendoza", "technician": "tecnico.demo",
+      "type": 1,
+      "urgency": 4,
+      "date": "2026-09-10T16:15:00",
+      "phone_serial": "R58NDEMO0003",
+      "customer": "cliente.jmendoza",
+      "technician": "tecnico.demo",
       "content": "Orden externa: GSPN-DEMO-000103\nSíntoma reportado: no enciende ni carga.\nSerie declarada en la orden: R58NDEMO0003\nEquipo fuera de garantía.",
       "diagnosis": "DIAGNÓSTICO: placa base con daño en circuito de carga (PMIC). Fuera de garantía. Presupuesto: S/ 640.00. Se solicita aprobación del cliente.",
       "work": null,
       "costs": [
-        {"name": "Presupuesto: Placa base GH82-DEMO-0303 (no ejecutado)", "cost_material": 520.0, "cost_fixed": 120.0, "minutes": 0}
+        {
+          "name": "Presupuesto: Placa base GH82-DEMO-0303 (no ejecutado)",
+          "cost_material": 520.0,
+          "cost_fixed": 120.0,
+          "minutes": 0
+        }
       ],
-      "approval": {"status": "refused", "submission_comment": "Presupuesto S/ 640.00 enviado al cliente.", "approval_comment": "Cliente rechaza el presupuesto; solicita devolución sin reparar (demo)."},
+      "approval": {
+        "status": "refused",
+        "submission_comment": "Presupuesto S/ 640.00 enviado al cliente.",
+        "approval_comment": "Cliente rechaza el presupuesto; solicita devolución sin reparar (demo)."
+      },
       "solution": null,
       "final_status": 4,
       "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000104",
+      "case": "pendiente_aprobacion",
+      "name": "Panel AMOLED Galaxy S24 Ultra (orden GSPN-DEMO-000104)",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-15T09:00:00",
+      "phone_serial": "R58NDEMO0004",
+      "customer": "cliente.demo01",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000104\nSíntoma reportado: pantalla no responde al tacto.\nSerie declarada en la orden: R58NDEMO0004",
+      "diagnosis": "DIAGNÓSTICO: se requiere panel amoled (GH82-DEMO-104). Presupuesto: S/ 970.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Panel AMOLED GH82-DEMO-104 (pendiente)",
+          "cost_material": 890.0,
+          "cost_fixed": 80.0,
+          "minutes": 60
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 970.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000105",
+      "case": "pendiente_aprobacion",
+      "name": "Batería Galaxy A55 5G (orden GSPN-DEMO-000105)",
+      "type": 1,
+      "urgency": 2,
+      "date": "2026-09-16T10:07:00",
+      "phone_serial": "R58NDEMO0005",
+      "customer": "cliente.demo02",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000105\nSíntoma reportado: no carga.\nSerie declarada en la orden: R58NDEMO0005",
+      "diagnosis": "DIAGNÓSTICO: se requiere batería (GH82-DEMO-205). Presupuesto: S/ 270.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Batería GH82-DEMO-205 (pendiente)",
+          "cost_material": 210.0,
+          "cost_fixed": 60.0,
+          "minutes": 30
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 270.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000106",
+      "case": "pendiente_aprobacion",
+      "name": "Placa de carga Galaxy Tab S9 (orden GSPN-DEMO-000106)",
+      "type": 1,
+      "urgency": 4,
+      "date": "2026-09-17T11:14:00",
+      "phone_serial": "R58NDEMO0006",
+      "customer": "cliente.demo03",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000106\nSíntoma reportado: se reinicia solo.\nSerie declarada en la orden: R58NDEMO0006",
+      "diagnosis": "DIAGNÓSTICO: se requiere placa de carga (GH82-DEMO-306). Presupuesto: S/ 300.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Placa de carga GH82-DEMO-306 (pendiente)",
+          "cost_material": 180.0,
+          "cost_fixed": 120.0,
+          "minutes": 30
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 300.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000107",
+      "case": "pendiente_aprobacion",
+      "name": "Módulo cámara Galaxy S23 FE (orden GSPN-DEMO-000107)",
+      "type": 1,
+      "urgency": 2,
+      "date": "2026-09-18T12:21:00",
+      "phone_serial": "R58NDEMO0007",
+      "customer": "cliente.demo04",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000107\nSíntoma reportado: cámara trasera borrosa.\nSerie declarada en la orden: R58NDEMO0007",
+      "diagnosis": "DIAGNÓSTICO: se requiere módulo cámara (GH82-DEMO-407). Presupuesto: S/ 420.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Módulo cámara GH82-DEMO-407 (pendiente)",
+          "cost_material": 340.0,
+          "cost_fixed": 80.0,
+          "minutes": 45
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 420.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000108",
+      "case": "pendiente_aprobacion",
+      "name": "Altavoz Galaxy A15 (orden GSPN-DEMO-000108)",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-19T13:28:00",
+      "phone_serial": "R58NDEMO0008",
+      "customer": "cliente.demo05",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000108\nSíntoma reportado: altavoz sin sonido.\nSerie declarada en la orden: R58NDEMO0008",
+      "diagnosis": "DIAGNÓSTICO: se requiere altavoz (GH82-DEMO-508). Presupuesto: S/ 175.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Altavoz GH82-DEMO-508 (pendiente)",
+          "cost_material": 95.0,
+          "cost_fixed": 80.0,
+          "minutes": 30
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 175.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000109",
+      "case": "pendiente_aprobacion",
+      "name": "Flex de encendido Galaxy Z Flip6 (orden GSPN-DEMO-000109)",
+      "type": 1,
+      "urgency": 4,
+      "date": "2026-09-20T14:35:00",
+      "phone_serial": "R58NDEMO0009",
+      "customer": "cliente.demo06",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000109\nSíntoma reportado: botón de encendido hundido.\nSerie declarada en la orden: R58NDEMO0009",
+      "diagnosis": "DIAGNÓSTICO: se requiere flex de encendido (GH82-DEMO-609). Presupuesto: S/ 240.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Flex de encendido GH82-DEMO-609 (pendiente)",
+          "cost_material": 120.0,
+          "cost_fixed": 120.0,
+          "minutes": 60
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 240.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000110",
+      "case": "pendiente_aprobacion",
+      "name": "Bandeja SIM + lector Galaxy Watch7 (orden GSPN-DEMO-000110)",
+      "type": 1,
+      "urgency": 2,
+      "date": "2026-09-21T15:42:00",
+      "phone_serial": "R58NDEMO0010",
+      "customer": "cliente.demo07",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000110\nSíntoma reportado: batería se agota en 2 horas.\nSerie declarada en la orden: R58NDEMO0010",
+      "diagnosis": "DIAGNÓSTICO: se requiere bandeja sim + lector (GH82-DEMO-710). Presupuesto: S/ 270.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Bandeja SIM + lector GH82-DEMO-710 (pendiente)",
+          "cost_material": 150.0,
+          "cost_fixed": 120.0,
+          "minutes": 60
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 270.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000111",
+      "case": "pendiente_aprobacion",
+      "name": "Panel AMOLED Galaxy S24 Ultra (orden GSPN-DEMO-000111)",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-22T16:49:00",
+      "phone_serial": "R58NDEMO0011",
+      "customer": "cliente.demo08",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000111\nSíntoma reportado: no detecta SIM.\nSerie declarada en la orden: R58NDEMO0011",
+      "diagnosis": "DIAGNÓSTICO: se requiere panel amoled (GH82-DEMO-111). Presupuesto: S/ 1010.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Panel AMOLED GH82-DEMO-111 (pendiente)",
+          "cost_material": 890.0,
+          "cost_fixed": 120.0,
+          "minutes": 30
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 1010.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000112",
+      "case": "pendiente_aprobacion",
+      "name": "Batería Galaxy A55 5G (orden GSPN-DEMO-000112)",
+      "type": 1,
+      "urgency": 4,
+      "date": "2026-09-15T09:56:00",
+      "phone_serial": "R58NDEMO0012",
+      "customer": "cliente.demo09",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000112\nSíntoma reportado: puerto USB-C flojo.\nSerie declarada en la orden: R58NDEMO0012",
+      "diagnosis": "DIAGNÓSTICO: se requiere batería (GH82-DEMO-212). Presupuesto: S/ 330.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Batería GH82-DEMO-212 (pendiente)",
+          "cost_material": 210.0,
+          "cost_fixed": 120.0,
+          "minutes": 90
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 330.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000113",
+      "case": "pendiente_aprobacion",
+      "name": "Placa de carga Galaxy Tab S9 (orden GSPN-DEMO-000113)",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-16T10:03:00",
+      "phone_serial": "R58NDEMO0013",
+      "customer": "cliente.demo10",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000113\nSíntoma reportado: pantalla con manchas.\nSerie declarada en la orden: R58NDEMO0013",
+      "diagnosis": "DIAGNÓSTICO: se requiere placa de carga (GH82-DEMO-313). Presupuesto: S/ 260.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Placa de carga GH82-DEMO-313 (pendiente)",
+          "cost_material": 180.0,
+          "cost_fixed": 80.0,
+          "minutes": 45
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 260.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000114",
+      "case": "pendiente_aprobacion",
+      "name": "Módulo cámara Galaxy S23 FE (orden GSPN-DEMO-000114)",
+      "type": 1,
+      "urgency": 4,
+      "date": "2026-09-17T11:10:00",
+      "phone_serial": "R58NDEMO0014",
+      "customer": "cliente.demo01",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000114\nSíntoma reportado: pantalla no responde al tacto.\nSerie declarada en la orden: R58NDEMO0014",
+      "diagnosis": "DIAGNÓSTICO: se requiere módulo cámara (GH82-DEMO-414). Presupuesto: S/ 460.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Módulo cámara GH82-DEMO-414 (pendiente)",
+          "cost_material": 340.0,
+          "cost_fixed": 120.0,
+          "minutes": 45
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 460.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000115",
+      "case": "pendiente_aprobacion",
+      "name": "Altavoz Galaxy A15 (orden GSPN-DEMO-000115)",
+      "type": 1,
+      "urgency": 4,
+      "date": "2026-09-18T12:17:00",
+      "phone_serial": "R58NDEMO0015",
+      "customer": "cliente.demo02",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000115\nSíntoma reportado: no carga.\nSerie declarada en la orden: R58NDEMO0015",
+      "diagnosis": "DIAGNÓSTICO: se requiere altavoz (GH82-DEMO-515). Presupuesto: S/ 155.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Altavoz GH82-DEMO-515 (pendiente)",
+          "cost_material": 95.0,
+          "cost_fixed": 60.0,
+          "minutes": 30
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 155.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000116",
+      "case": "pendiente_aprobacion",
+      "name": "Flex de encendido Galaxy Z Flip6 (orden GSPN-DEMO-000116)",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-19T13:24:00",
+      "phone_serial": "R58NDEMO0016",
+      "customer": "cliente.demo03",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000116\nSíntoma reportado: se reinicia solo.\nSerie declarada en la orden: R58NDEMO0016",
+      "diagnosis": "DIAGNÓSTICO: se requiere flex de encendido (GH82-DEMO-616). Presupuesto: S/ 180.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Flex de encendido GH82-DEMO-616 (pendiente)",
+          "cost_material": 120.0,
+          "cost_fixed": 60.0,
+          "minutes": 60
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 180.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000117",
+      "case": "pendiente_aprobacion",
+      "name": "Bandeja SIM + lector Galaxy Watch7 (orden GSPN-DEMO-000117)",
+      "type": 1,
+      "urgency": 2,
+      "date": "2026-09-20T14:31:00",
+      "phone_serial": "R58NDEMO0017",
+      "customer": "cliente.demo04",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000117\nSíntoma reportado: cámara trasera borrosa.\nSerie declarada en la orden: R58NDEMO0017",
+      "diagnosis": "DIAGNÓSTICO: se requiere bandeja sim + lector (GH82-DEMO-717). Presupuesto: S/ 210.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Bandeja SIM + lector GH82-DEMO-717 (pendiente)",
+          "cost_material": 150.0,
+          "cost_fixed": 60.0,
+          "minutes": 90
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 210.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000118",
+      "case": "pendiente_aprobacion",
+      "name": "Panel AMOLED Galaxy S24 Ultra (orden GSPN-DEMO-000118)",
+      "type": 1,
+      "urgency": 2,
+      "date": "2026-09-21T15:38:00",
+      "phone_serial": "R58NDEMO0018",
+      "customer": "cliente.demo05",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000118\nSíntoma reportado: altavoz sin sonido.\nSerie declarada en la orden: R58NDEMO0018",
+      "diagnosis": "DIAGNÓSTICO: se requiere panel amoled (GH82-DEMO-118). Presupuesto: S/ 1010.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Panel AMOLED GH82-DEMO-118 (pendiente)",
+          "cost_material": 890.0,
+          "cost_fixed": 120.0,
+          "minutes": 90
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 1010.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000119",
+      "case": "pendiente_aprobacion",
+      "name": "Batería Galaxy A55 5G (orden GSPN-DEMO-000119)",
+      "type": 1,
+      "urgency": 2,
+      "date": "2026-09-22T16:45:00",
+      "phone_serial": "R58NDEMO0019",
+      "customer": "cliente.demo06",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000119\nSíntoma reportado: botón de encendido hundido.\nSerie declarada en la orden: R58NDEMO0019",
+      "diagnosis": "DIAGNÓSTICO: se requiere batería (GH82-DEMO-219). Presupuesto: S/ 330.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Batería GH82-DEMO-219 (pendiente)",
+          "cost_material": 210.0,
+          "cost_fixed": 120.0,
+          "minutes": 30
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 330.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000120",
+      "case": "pendiente_aprobacion",
+      "name": "Placa de carga Galaxy Tab S9 (orden GSPN-DEMO-000120)",
+      "type": 1,
+      "urgency": 4,
+      "date": "2026-09-15T09:52:00",
+      "phone_serial": "R58NDEMO0020",
+      "customer": "cliente.demo07",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000120\nSíntoma reportado: batería se agota en 2 horas.\nSerie declarada en la orden: R58NDEMO0020",
+      "diagnosis": "DIAGNÓSTICO: se requiere placa de carga (GH82-DEMO-320). Presupuesto: S/ 260.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Placa de carga GH82-DEMO-320 (pendiente)",
+          "cost_material": 180.0,
+          "cost_fixed": 80.0,
+          "minutes": 30
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 260.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000121",
+      "case": "pendiente_aprobacion",
+      "name": "Módulo cámara Galaxy S23 FE (orden GSPN-DEMO-000121)",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-16T10:59:00",
+      "phone_serial": "R58NDEMO0021",
+      "customer": "cliente.demo08",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000121\nSíntoma reportado: no detecta SIM.\nSerie declarada en la orden: R58NDEMO0021",
+      "diagnosis": "DIAGNÓSTICO: se requiere módulo cámara (GH82-DEMO-421). Presupuesto: S/ 420.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Módulo cámara GH82-DEMO-421 (pendiente)",
+          "cost_material": 340.0,
+          "cost_fixed": 80.0,
+          "minutes": 30
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 420.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000122",
+      "case": "pendiente_aprobacion",
+      "name": "Altavoz Galaxy A15 (orden GSPN-DEMO-000122)",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-17T11:06:00",
+      "phone_serial": "R58NDEMO0022",
+      "customer": "cliente.demo09",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000122\nSíntoma reportado: puerto USB-C flojo.\nSerie declarada en la orden: R58NDEMO0022",
+      "diagnosis": "DIAGNÓSTICO: se requiere altavoz (GH82-DEMO-522). Presupuesto: S/ 215.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Altavoz GH82-DEMO-522 (pendiente)",
+          "cost_material": 95.0,
+          "cost_fixed": 120.0,
+          "minutes": 60
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 215.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando aprobación del cliente (demo)"
+    },
+    {
+      "external_id": "GSPN-DEMO-000123",
+      "case": "pendiente_aprobacion",
+      "name": "Flex de encendido Galaxy Z Flip6 (orden GSPN-DEMO-000123)",
+      "type": 1,
+      "urgency": 3,
+      "date": "2026-09-18T12:13:00",
+      "phone_serial": "R58NDEMO0023",
+      "customer": "cliente.demo10",
+      "technician": "tecnico.demo",
+      "content": "Orden externa: GSPN-DEMO-000123\nSíntoma reportado: pantalla con manchas.\nSerie declarada en la orden: R58NDEMO0023",
+      "diagnosis": "DIAGNÓSTICO: se requiere flex de encendido (GH82-DEMO-623). Presupuesto: S/ 240.00. Se solicita aprobación del cliente.",
+      "work": null,
+      "costs": [
+        {
+          "name": "Presupuesto: Flex de encendido GH82-DEMO-623 (pendiente)",
+          "cost_material": 120.0,
+          "cost_fixed": 120.0,
+          "minutes": 30
+        }
+      ],
+      "approval": {
+        "status": "waiting",
+        "submission_comment": "Presupuesto S/ 240.00 enviado al cliente; sin respuesta aún.",
+        "approval_comment": ""
+      },
+      "solution": null,
+      "final_status": 4,
+      "pending_reason": "Esperando repuesto (demo)"
     }
   ]
 }

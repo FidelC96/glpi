@@ -41,6 +41,10 @@ Solo Python 3 estándar (sin dependencias) y `docker compose`.
 | GSPN-DEMO-000102 | serie diferente entre sistemas | Galaxy A55 5G, R58NDEMO0002 (Odoo tiene R58NDEM00002) | Solved | Accepted | bloqueado por serie |
 | GSPN-DEMO-000103 | pendiente / rechazado | Galaxy Tab S9, R58NDEMO0003 | Pending | Refused | sin factura |
 
+Además, 20 tickets **pendientes de aprobación** (GSPN-DEMO-000104 a 000123): estado Pending,
+validación Waiting, motivo de pendiente alternado ("Esperando aprobación del cliente" / "Esperando repuesto"),
+un equipo distinto cada uno y 10 clientes adicionales. Sirven para probar el flujo de aprobación desde Odoo.
+
 Clientes ficticios: Rosa Quispe Demo, Luis Paredes (Comercial Andina SAC demo), Jorge Mendoza
 Demo. Técnica ficticia: Carla Rojas Demo (`tecnico.demo`, perfil Technician). La "ficha Odoo"
 simulada está en `data/odoo_side.json`.

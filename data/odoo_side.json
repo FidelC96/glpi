@@ -1,14 +1,114 @@
 {
   "_nota": "Fixture que SIMULA lo que Odoo tendría registrado antes de conciliar (ficticio). Sirve para que scripts/verify_api.py muestre la comparación GLPI vs Odoo. No hay conexión a ningún Odoo.",
   "partners": {
-    "cliente.rquispe": {"name": "Rosa Quispe Demo", "vat": "10000000011"},
-    "cliente.andina": {"name": "Comercial Andina SAC (demo)", "vat": "20000000022", "contact": "Luis Paredes"},
-    "cliente.jmendoza": {"name": "Jorge Mendoza Demo", "vat": "10000000033"}
+    "cliente.rquispe": {
+      "name": "Rosa Quispe Demo",
+      "vat": "10000000011"
+    },
+    "cliente.andina": {
+      "name": "Comercial Andina SAC (demo)",
+      "vat": "20000000022",
+      "contact": "Luis Paredes"
+    },
+    "cliente.jmendoza": {
+      "name": "Jorge Mendoza Demo",
+      "vat": "10000000033"
+    }
   },
   "lots": {
-    "GSPN-DEMO-000101": {"product": "Galaxy S24 Ultra SM-S928B", "lot_name": "R58NDEMO0001"},
-    "GSPN-DEMO-000102": {"product": "Galaxy A55 5G SM-A556E", "lot_name": "R58NDEM00002", "_nota": "Discrepancia intencional: 'O' vs '0' respecto a GLPI (R58NDEMO0002)."},
-    "GSPN-DEMO-000103": {"product": "Galaxy Tab S9 SM-X710", "lot_name": "R58NDEMO0003"}
+    "GSPN-DEMO-000101": {
+      "product": "Galaxy S24 Ultra SM-S928B",
+      "lot_name": "R58NDEMO0001"
+    },
+    "GSPN-DEMO-000102": {
+      "product": "Galaxy A55 5G SM-A556E",
+      "lot_name": "R58NDEM00002",
+      "_nota": "Discrepancia intencional: 'O' vs '0' respecto a GLPI (R58NDEMO0002)."
+    },
+    "GSPN-DEMO-000103": {
+      "product": "Galaxy Tab S9 SM-X710",
+      "lot_name": "R58NDEMO0003"
+    },
+    "GSPN-DEMO-000104": {
+      "product": "Galaxy S24 Ultra SM-S928B",
+      "lot_name": "R58NDEMO0004"
+    },
+    "GSPN-DEMO-000105": {
+      "product": "Galaxy A55 5G SM-A556E",
+      "lot_name": "R58NDEMO0005"
+    },
+    "GSPN-DEMO-000106": {
+      "product": "Galaxy Tab S9 SM-X710",
+      "lot_name": "R58NDEMO0006"
+    },
+    "GSPN-DEMO-000107": {
+      "product": "Galaxy S23 FE SM-S711B",
+      "lot_name": "R58NDEMO0007"
+    },
+    "GSPN-DEMO-000108": {
+      "product": "Galaxy A15 SM-A155M",
+      "lot_name": "R58NDEMO0008"
+    },
+    "GSPN-DEMO-000109": {
+      "product": "Galaxy Z Flip6 SM-F741B",
+      "lot_name": "R58NDEMO0009"
+    },
+    "GSPN-DEMO-000110": {
+      "product": "Galaxy Watch7 SM-L310",
+      "lot_name": "R58NDEMO0010"
+    },
+    "GSPN-DEMO-000111": {
+      "product": "Galaxy S24 Ultra SM-S928B",
+      "lot_name": "R58NDEMO0011"
+    },
+    "GSPN-DEMO-000112": {
+      "product": "Galaxy A55 5G SM-A556E",
+      "lot_name": "R58NDEMO0012"
+    },
+    "GSPN-DEMO-000113": {
+      "product": "Galaxy Tab S9 SM-X710",
+      "lot_name": "R58NDEMO0013"
+    },
+    "GSPN-DEMO-000114": {
+      "product": "Galaxy S23 FE SM-S711B",
+      "lot_name": "R58NDEMO0014"
+    },
+    "GSPN-DEMO-000115": {
+      "product": "Galaxy A15 SM-A155M",
+      "lot_name": "R58NDEMO0015"
+    },
+    "GSPN-DEMO-000116": {
+      "product": "Galaxy Z Flip6 SM-F741B",
+      "lot_name": "R58NDEMO0016"
+    },
+    "GSPN-DEMO-000117": {
+      "product": "Galaxy Watch7 SM-L310",
+      "lot_name": "R58NDEMO0017"
+    },
+    "GSPN-DEMO-000118": {
+      "product": "Galaxy S24 Ultra SM-S928B",
+      "lot_name": "R58NDEMO0018"
+    },
+    "GSPN-DEMO-000119": {
+      "product": "Galaxy A55 5G SM-A556E",
+      "lot_name": "R58NDEMO0019"
+    },
+    "GSPN-DEMO-000120": {
+      "product": "Galaxy Tab S9 SM-X710",
+      "lot_name": "R58NDEMO0020"
+    },
+    "GSPN-DEMO-000121": {
+      "product": "Galaxy S23 FE SM-S711B",
+      "lot_name": "R58NDEMO0021"
+    },
+    "GSPN-DEMO-000122": {
+      "product": "Galaxy A15 SM-A155M",
+      "lot_name": "R58NDEMO0022"
+    },
+    "GSPN-DEMO-000123": {
+      "product": "Galaxy Z Flip6 SM-F741B",
+      "lot_name": "R58NDEMO0023"
+    }
   },
   "invoice_policy": {
     "currency": "PEN",

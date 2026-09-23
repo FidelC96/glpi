@@ -37,6 +37,9 @@ def sanitize(obj) -> str:
     return txt
 
 
+EXAMPLES_FOR = 3  # solo los primeros N tickets generan ejemplos en docs/API_EJEMPLOS.md
+
+
 def ex(title: str, method: str, url: str, body: dict | None, response, note: str = ""):
     block = [f"### {title}", "", f"`{method} {url}`"]
     if body is not None:
@@ -64,26 +67,27 @@ def main() -> int:
        "Luego cada llamada lleva `Authorization: Bearer <access_token>`.")
 
     rows = []
-    for t in SEED["tickets"]:
+    for idx, t in enumerate(SEED["tickets"]):
         ext = t["external_id"]
+        _ex = ex if idx < EXAMPLES_FOR else (lambda *a, **k: None)
         url = f"{base}/Assistance/Ticket?filter=external_id=={ext}"
         tk = g.search("/Assistance/Ticket", f"external_id=={ext}")[0]
-        ex(f"Buscar ticket por referencia externa {ext}", "GET", url, None, [tk])
+        _ex(f"Buscar ticket por referencia externa {ext}", "GET", url, None, [tk])
         tid = tk["id"]
 
         items = legacy.ticket_items(tid)
-        ex(f"Equipo vinculado al ticket {tid} (API heredada; la v2.3 no expone Item_Ticket)", "GET",
+        _ex(f"Equipo vinculado al ticket {tid} (API heredada; la v2.3 no expone Item_Ticket)", "GET",
            f"{legacy.base}/Ticket/{tid}/Item_Ticket", None, items, "Cabecera: `Session-Token: <session_token>` (obtenido con `GET /apirest.php/initSession` y `Authorization: user_token <token>`).")
         phone = g.get(f"/Assets/Phone/{items[0]['items_id']}")
-        ex(f"Equipo {phone['serial']}", "GET", f"{base}/Assets/Phone/{phone['id']}", None, phone)
+        _ex(f"Equipo {phone['serial']}", "GET", f"{base}/Assets/Phone/{phone['id']}", None, phone)
         infocom = g.get(f"/Assets/Phone/{phone['id']}/Infocom")
-        ex(f"Garantía del equipo {phone['serial']}", "GET", f"{base}/Assets/Phone/{phone['id']}/Infocom", None, infocom)
+        _ex(f"Garantía del equipo {phone['serial']}", "GET", f"{base}/Assets/Phone/{phone['id']}/Infocom", None, infocom)
         timeline = g.get(f"/Assistance/Ticket/{tid}/Timeline")
-        ex(f"Línea de tiempo del ticket {tid} (diagnóstico, trabajo, aprobación, solución)", "GET", f"{base}/Assistance/Ticket/{tid}/Timeline", None, timeline)
+        _ex(f"Línea de tiempo del ticket {tid} (diagnóstico, trabajo, aprobación, solución)", "GET", f"{base}/Assistance/Ticket/{tid}/Timeline", None, timeline)
         costs = g.get(f"/Assistance/Ticket/{tid}/Cost")
-        ex(f"Costos del ticket {tid} (repuestos y mano de obra)", "GET", f"{base}/Assistance/Ticket/{tid}/Cost", None, costs)
+        _ex(f"Costos del ticket {tid} (repuestos y mano de obra)", "GET", f"{base}/Assistance/Ticket/{tid}/Cost", None, costs)
         team = g.get(f"/Assistance/Ticket/{tid}/TeamMember")
-        ex(f"Actores del ticket {tid} (cliente solicitante, técnico asignado)", "GET", f"{base}/Assistance/Ticket/{tid}/TeamMember", None, team)
+        _ex(f"Actores del ticket {tid} (cliente solicitante, técnico asignado)", "GET", f"{base}/Assistance/Ticket/{tid}/TeamMember", None, team)
 
         material = sum(float(c["cost_material"] or 0) for c in costs)
         labor = sum(float(c["cost_fixed"] or 0) for c in costs)
