@@ -14,6 +14,8 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# Cloudflare bloquea el UA por defecto de urllib ("Python-urllib", error 1010); se envía uno propio.
+USER_AGENT = "glpi-gspn-demo/1.0 (+https://github.com/FidelC96/glpi)"
 
 
 def load_env(path: Path = ROOT / ".env") -> dict[str, str]:
@@ -50,7 +52,7 @@ class GlpiV2:
     # --- transporte -------------------------------------------------------
     def _request(self, method: str, url: str, body: dict | None = None, headers: dict | None = None):
         data = json.dumps(body).encode() if body is not None else None
-        h = {"Accept": "application/json"}
+        h = {"Accept": "application/json", "User-Agent": USER_AGENT}
         if data is not None:
             h["Content-Type"] = "application/json"
         if self.token:
@@ -116,7 +118,7 @@ class GlpiLegacy:
 
     def _request(self, method: str, path: str, body: dict | None = None):
         data = json.dumps(body).encode() if body is not None else None
-        h = {"Content-Type": "application/json"}
+        h = {"Content-Type": "application/json", "User-Agent": USER_AGENT}
         if self.session:
             h["Session-Token"] = self.session
         else:

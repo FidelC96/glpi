@@ -93,7 +93,15 @@ python3 scripts/seed_demo.py     # entra por https://glpi-demo.rapi.tech (GLPI_B
 python3 scripts/verify_api.py    # tabla de los 3 casos y regenera docs/API_EJEMPLOS.md
 ```
 
-Si `seed_demo.py` falla con 403 o conexión rechazada, el servidor no se está viendo a sí mismo por
+Si `seed_demo.py` falla con un 403 de Cloudflare (error 1010, "browser signature"), actualiza el repo
+(`git pull`): el cliente ya envía un User-Agent propio. Alternativa que evita Cloudflare y nginx por completo,
+hablando con el contenedor por la red Docker (solo desde el propio servidor):
+
+```bash
+GLPI_BASE_URL=http://$(docker inspect glpi_gspn_app --format '{{(index .NetworkSettings.Networks "odoo-network").IPAddress}}') python3 scripts/seed_demo.py
+```
+
+Si `seed_demo.py` falla con 403 de nginx o conexión rechazada, el servidor no se está viendo a sí mismo por
 nginx: revisa que `allow 172.18.0.0/16;` esté en el bloque y que `dig +short glpi-demo.rapi.tech`
 funcione desde elune.
 
