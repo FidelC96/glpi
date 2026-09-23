@@ -1,0 +1,44 @@
+# Demo GLPI como SIMULADOR de un sistema externo tipo GSPN (Samsung).
+# No es una integración real con GSPN. Datos 100% ficticios.
+name: glpi_gspn_demo
+
+services:
+  glpi:
+    image: "glpi/glpi:${GLPI_VERSION:-11.0.9}"
+    container_name: glpi_gspn_app
+    restart: "unless-stopped"
+    env_file: .env
+    environment:
+      TZ: ${TZ:-America/Lima}
+      GLPI_CRONTAB_ENABLED: "1"
+    volumes:
+      - glpi_gspn_data:/var/glpi
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      # Solo loopback: no se publica en Internet ni en la LAN salvo que cambies GLPI_BIND.
+      - "${GLPI_BIND:-127.0.0.1}:${GLPI_PORT:-8090}:80"
+
+  db:
+    image: "mariadb:${MARIADB_VERSION:-11.4.13}"
+    container_name: glpi_gspn_db
+    restart: "unless-stopped"
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: "yes"
+      MARIADB_DATABASE: ${GLPI_DB_NAME}
+      MARIADB_USER: ${GLPI_DB_USER}
+      MARIADB_PASSWORD: ${GLPI_DB_PASSWORD}
+      TZ: ${TZ:-America/Lima}
+    volumes:
+      - glpi_gspn_db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    # Sin "ports": la base de datos solo es accesible desde la red interna de Compose.
+
+volumes:
+  glpi_gspn_data:
+  glpi_gspn_db:

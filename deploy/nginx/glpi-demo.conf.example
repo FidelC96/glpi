@@ -1,0 +1,42 @@
+# Bloque nginx para la demo GLPI en elune. Copiar a /home/debian/nginx/sites-available/glpi-demo.conf
+# y enlazar en sites-enabled. Reemplazar DOMINIO y la lista de IPs permitidas.
+# nginx corre como contenedor en la red `odoo-network`; GLPI se une a esa red y se alcanza por nombre.
+
+upstream glpi_demo { server glpi_gspn_app:80; }
+
+# 80: solo reto ACME (certbot webroot) y redirección a https
+server {
+    listen 80;
+    listen [::]:80;
+    server_name glpi-demo.rapi.tech;
+
+    location /.well-known/acme-challenge/ { root /var/www/html; }
+    location / { return 301 https://$host$request_uri; }
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name glpi-demo.rapi.tech;
+
+    ssl_certificate     /etc/letsencrypt/live/glpi-demo.rapi.tech/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/glpi-demo.rapi.tech/privkey.pem;
+
+    # El 443 es público en este servidor: restringir quién entra a la demo.
+    allow 190.0.0.10;        # oficina (ejemplo)
+    allow 10.8.0.0/24;       # VPN (ejemplo)
+    allow 172.18.0.0/16;     # el propio servidor via red docker (scripts seed/verify con GLPI_BASE_URL)
+    deny  all;
+
+    client_max_body_size 64m;
+
+    location / {
+        proxy_pass         http://glpi_demo;
+        proxy_set_header   Host              $host;
+        proxy_set_header   X-Real-IP         $remote_addr;
+        proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Proto https;
+        proxy_read_timeout 120s;
+    }
+}

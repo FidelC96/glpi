@@ -1,0 +1,17 @@
+{
+  "_nota": "Fixture que SIMULA lo que Odoo tendría registrado antes de conciliar (ficticio). Sirve para que scripts/verify_api.py muestre la comparación GLPI vs Odoo. No hay conexión a ningún Odoo.",
+  "partners": {
+    "cliente.rquispe": {"name": "Rosa Quispe Demo", "vat": "10000000011"},
+    "cliente.andina": {"name": "Comercial Andina SAC (demo)", "vat": "20000000022", "contact": "Luis Paredes"},
+    "cliente.jmendoza": {"name": "Jorge Mendoza Demo", "vat": "10000000033"}
+  },
+  "lots": {
+    "GSPN-DEMO-000101": {"product": "Galaxy S24 Ultra SM-S928B", "lot_name": "R58NDEMO0001"},
+    "GSPN-DEMO-000102": {"product": "Galaxy A55 5G SM-A556E", "lot_name": "R58NDEM00002", "_nota": "Discrepancia intencional: 'O' vs '0' respecto a GLPI (R58NDEMO0002)."},
+    "GSPN-DEMO-000103": {"product": "Galaxy Tab S9 SM-X710", "lot_name": "R58NDEMO0003"}
+  },
+  "invoice_policy": {
+    "currency": "PEN",
+    "rule": "Solo se habilita la factura cuando: estado del servicio = aprobado y cerrado/resuelto en GLPI, validación = aceptada, y serie GLPI == lote Odoo. Nunca se emite automáticamente."
+  }
+}
